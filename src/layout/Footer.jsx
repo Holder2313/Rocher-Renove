@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className=" w-full bg-main-color pt-10 mt-20 text-slate-100 flex flex-col justify-between ">
       <div className=" flex flex-col md:flex-row max-w-[1340px] mx-auto px-[30px] ">
         <article className="  flex flex-col md:w-1/2 mb-5 md:mb-0 text-center md:text-justify    ">
-          <h5 className={`${titreFooter} font-['Rubik'] `}>
+          <h5 className={`${titreFooter} font-['Rubik'] px-4 `}>
             Rocher <span className=" font-thin">Renove</span>{" "}
           </h5>
-          <p className=" italic font-thin  ">
+          <p className=" text-sm italic font-thin px-4  ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             cum laborum aliquid, libero natus, autem nesciunt vel quam quae
             laudantium velit!
@@ -41,7 +41,7 @@ export default function Footer() {
         </section>
       </div>
 
-      <section className=" bg-slate-700 w-full flex justify-center text-sm py-2 mt-10 font-thin">
+      <section className=" bg-gray-900 w-full flex justify-center text-sm py-2 mt-10 font-thin">
         <p>
           ROCHER RENOVE © <span> 2024 | </span>{" "}
           <span className=" cursor-pointer">Mentions légales</span>{" "}

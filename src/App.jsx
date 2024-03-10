@@ -4,6 +4,7 @@ import Cta from "./components/cta/Cta"
 import Avantages from "./layout/Avantages"
 import Footer from "./layout/Footer"
 import GalleryHome from "./layout/GalleryHome"
+// import HeaderNav from "./layout/HeaderNav"
 
 import Header from "./layout/Header"
 
@@ -14,7 +15,8 @@ function App() {
   
   return (
     <div className=" overflow-auto ">
-       <Header />
+      <Header />
+      {/* <HeaderNav /> */}
       <HeroSlider />
       <Intro />
       {/* <Gsap /> */}

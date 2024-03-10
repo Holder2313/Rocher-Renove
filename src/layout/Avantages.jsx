@@ -18,13 +18,12 @@ export default function Avantages() {
       {
         x: 400,
           opacity: 0,
-        display: 'none',
+        opacity: 0,
         stagger: 0.1,
         duration: 0.6, 
       },
       {
           x: 0,
-          display: 'flex',
         opacity: 1,
         stagger: 0.2,
         duration: 0.6,
@@ -39,7 +38,7 @@ export default function Avantages() {
   }, []);
 
   return (
-    <section className="max-w-[1340px] mx-auto my-24">
+    <section className="max-w-[1340px] mx-auto my-24 overflow-auto">
       <div className=" my-14 pl-[30px]">
         <h3 className=" text-3xl">Sous titre</h3>
         <h2 className=" text-xl">Nos avantages</h2>
