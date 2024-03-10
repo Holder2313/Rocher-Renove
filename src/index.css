@@ -1,0 +1,18 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* .imgBoxShadowLeft{
+    box-shadow: -30px 30px 0px 2px #838383;
+}
+.imgBoxShadowRight{
+    box-shadow: 30px 30px 0px 2px #838383;
+} */
+
+h6{
+    color: #2b4547;
+}
