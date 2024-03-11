@@ -1,18 +1,22 @@
-import React from 'react'
-import ServiceCard from '../components/ServiceCard';
+import React from "react";
+import ServiceCard from "../components/ServiceCard";
 import { carData } from "../data/services/cardData";
+import Titre from "../components/titre/Titre";
+
 
 export default function Services() {
-
-    const cardData = carData;
-    console.log(cardData);
+  const cardData = carData;
+  console.log(cardData);
 
   return (
     <section className=" max-w-[1340px] mx-auto px-[30px]">
-      <h3 className=" text-3xl">Nos Prestations</h3>
-
+      
+<Titre titre={'Nos Services'} />
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center my-20 gap-6  ">
-        {cardData && cardData.map((card, index) => <ServiceCard key={index} cardData={card} />)}
+        {cardData &&
+          cardData.map((card, index) => (
+            <ServiceCard key={index} cardData={card} />
+          ))}
       </div>
     </section>
   );

@@ -1,0 +1,2 @@
+Footer:
+gerer liste dynamiques pour les services

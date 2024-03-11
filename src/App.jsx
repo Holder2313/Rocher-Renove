@@ -1,35 +1,24 @@
-// import Gsap from "./components/Gsap"
-import HeroSlider from "./components/HeroSlider"
-import Cta from "./components/cta/Cta"
-import Avantages from "./layout/Avantages"
-import Footer from "./layout/Footer"
-import GalleryHome from "./layout/GalleryHome"
-// import HeaderNav from "./layout/HeaderNav"
-
-import Header from "./layout/Header"
-
-import Intro from "./layout/Intro"
-import Services from "./layout/Services"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header/Header";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
-  
   return (
-    <div className=" overflow-auto ">
-      <Header />
-      {/* <HeaderNav /> */}
-      <HeroSlider />
-      <Intro />
-      {/* <Gsap /> */}
-      <Services />
-      <Cta />
-      <Avantages />
-      <GalleryHome />
-      <Footer />
-      
-    </div>
-   
-    
-  )
+    <BrowserRouter>
+      <div className="overflow-auto">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

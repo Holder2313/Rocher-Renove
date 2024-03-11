@@ -1,15 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import ContactBtn from "../components/button/ContactBtn";
-import logo from "../assets/logo/logo.png";
-import close from "../assets/icons/close.svg";
-import ContactBtnLong from "../components/button/ContactBtnLong";
+import ContactBtn from "../../components/button/ContactBtn";
+import logo from "../../assets/logo/logo.png";
+import close from "../../assets/icons/close.svg";
+import ContactBtnLong from "../../components/button/ContactBtnLong";
+import { linksData } from "./headerLinksData";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
   const linksRef = useRef([]);
   const btnRef = useRef(null);
+
+  const links = linksData;
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -50,9 +54,8 @@ export default function Header() {
           isMenuOpen ? "flex py-28 px-4 flex-col lg:flex-row w-full" : "hidden"
         } lg:flex lg:items-center lg:justify-end transition-opacity duration-500`}
       >
-       
         <div className="lg:hidden w-[95%] flex justify-between items-center absolute top-4  ">
-           {/* logo */}
+          {/* logo */}
           <div className="flex items-center gap-2 ">
             <img className="w-[50px] sm:w-[70px]" src={logo} alt="Logo" />
             <h1 className="font-['Rubik'] text-lg sm:text-xl">
@@ -66,21 +69,17 @@ export default function Header() {
           </button>
         </div>
 
-        
-          {[
-          "Accueil",
-          "Intérieur",
-          "Revêtement mural",
-          "Revêtement sol",
-          "Réalisations",
-        ].map((link, index) => (
-          <p
-            key={index}
-            ref={(el) => (linksRef.current[index] = el)}
-            className="my-4 mx-4 lg:flex text-3xl lg:text-sm font-semibold"
-          >
-            {link}
-          </p>
+        {links.map((link, index) => (
+          <Link to={`${link.path}`}>
+            <p
+              onClick={() => setIsMenuOpen(false)}
+              key={index}
+              ref={(el) => (linksRef.current[index] = el)}
+              className="my-4 mx-4 lg:flex text-3xl lg:text-sm font-semibold"
+            >
+              {link.link}
+            </p>
+          </Link>
         ))}
 
         <div
@@ -92,10 +91,7 @@ export default function Header() {
           ) : (
             <ContactBtn txt={"Contact"} />
           )}
-        
         </div>
-
-        
       </nav>
     </header>
   );

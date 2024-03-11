@@ -4,6 +4,7 @@ import AvantageItem from "../components/avantages/AvantageItem";
 import { gsap } from "gsap";
 import { avantagesList } from "../components/avantages/avantagesList";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import Titre from "../components/titre/Titre";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -38,11 +39,8 @@ export default function Avantages() {
   }, []);
 
   return (
-    <section className="max-w-[1340px] mx-auto my-24 overflow-auto">
-      <div className=" my-14 pl-[30px]">
-        <h3 className=" text-3xl">Sous titre</h3>
-        <h2 className=" text-xl">Nos avantages</h2>
-      </div>
+    <section className=" max-w-[1340px] mx-auto px-[30px] my-24 overflow-auto">
+      <Titre titre={"Nos Avantages"} />
 
       <div className=" flex flex-col lg:flex-row w-full lg:pl-[30px] ">
         {/* image */}

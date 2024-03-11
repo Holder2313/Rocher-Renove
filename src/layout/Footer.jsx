@@ -20,7 +20,7 @@ export default function Footer() {
         <section className="  w-full md:w-1/2 flex items-center  justify-between ">
           <article className=" md:w-[30%] flex flex-col justify-center items-center  md:mb-0 ">
             <h5 className={`${titreFooter}`}>Services</h5>
-            <ul>
+            <ul className=" text-sm font-thin">
               <li>Interieur</li>
               <li>Exterieur</li>
               <li>Parquet</li>
@@ -31,7 +31,7 @@ export default function Footer() {
           <article className="md:w-[50%] md:text-justify flex flex-col justify-center ">
             <h5 className={`${titreFooter}`}>Contact</h5>
 
-            <address className=" flex flex-col">
+            <address className=" flex flex-col text-sm font-thin">
               123 Rue Exemple <br />
               75000 Paris <br />
               <a href="tel:+33123456789">Tél : +33 1 23 45 67 89</a>

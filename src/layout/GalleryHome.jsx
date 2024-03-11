@@ -14,6 +14,7 @@ import parquet from "../assets/images/services/parquet.jpg";
 import canape from "../assets/images/slider/canape.webp";
 import chambre from "../assets/images/slider/chambre.webp";
 import salon from "../assets/images/slider/salon.webp";
+import Titre from "../components/titre/Titre";
 
 
 
@@ -106,11 +107,8 @@ export default function GalleryHome() {
     }, []);
 
   return (
-    <section className="max-w-[1340px] mx-auto bg-slate-100 py-10 px-2">
-      <div className=" mb-5 pl-[30px]">
-        <h3 className="text-3xl">Sous titre</h3>
-        <h2 className="text-xl">Nos réalisations</h2>
-      </div>
+    <section className="max-w-[1340px] mx-auto px-[30px] bg-slate-100 py-10">
+      <Titre titre={"Nos réalisations"} />
 
       <div className="flex flex-wrap gap-2 justify-center">
         {images.map((image, index) => (

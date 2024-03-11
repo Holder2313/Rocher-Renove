@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function ContactBtnLong({txt}) {
+export default function ContactBtnLong({ txt }) {
   return (
-    <p className=" w-full mx-auto lg:mx-0 my-6 flex justify-center items-center text-slate-100 bg-main-color py-2 px-6">
-      {txt}
-    </p>
+    <Link to='/contact'>
+      <button className=" w-full mx-auto lg:mx-0 my-6 flex justify-center items-center text-slate-100 bg-main-color py-2 px-6">
+        {txt}
+      </button>
+    </Link>
   );
 }

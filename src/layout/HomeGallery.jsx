@@ -14,6 +14,7 @@ import parquet from "../assets/images/services/parquet.jpg";
 import canape from "../assets/images/slider/canape.jpg";
 import chambre from "../assets/images/slider/chambre.jpg";
 import salon from "../assets/images/slider/salon.jpg";
+import Titre from "../components/titre/Titre";
 
 export default function HomeGallery() {
 
@@ -86,10 +87,7 @@ export default function HomeGallery() {
 
   return (
     <section className=" start max-w-[1340px] mx-auto bg-slate-50">
-      <div className=" my-14 pl-[30px]">
-        <h3 className=" text-3xl">Sous titre</h3>
-        <h2 className=" text-xl">Nos réalisations</h2>
-      </div>
+        <Titre titre={'Nos Réalisations'} />
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
         <Masonry gutter="10px">
           {images.map((image, index) => (
