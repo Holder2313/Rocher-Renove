@@ -5,19 +5,11 @@ import { avantagesList } from "../components/avantages/avantagesList";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // Importe tes images
-import cuisine from "../assets/images/home/entreeCuisine.jpg";
-import pinceau from "../assets/images/home/pinceau.jpg";
-import bath from "../assets/images/services/bath.jpg";
-import facade from "../assets/images/services/facade.jpg";
-import interieur from "../assets/images/services/interieur.jpeg";
-import parquet from "../assets/images/services/parquet.jpg";
-import canape from "../assets/images/slider/canape.webp";
-import chambre from "../assets/images/slider/chambre.webp";
-import salon from "../assets/images/slider/salon.webp";
 import Titre from "../components/titre/Titre";
+import {imagesData } from "../data/gallery/galleryData";
 
 
-
+const images = imagesData
 
 export default function GalleryHome() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,72 +22,36 @@ export default function GalleryHome() {
     setSelectedImage(null);
   };
 
-  const images = [
-    {
-      img: pinceau,
-      size: "vertical",
-    },
-    {
-      img: bath,
-      size: "vertical",
-    },
-    {
-      img: facade,
-      size: "vertical",
-    },
-    {
-      img: salon,
-      size: "horizontal",
-    },
-    {
-      img: interieur,
-      size: "vertical",
-    },
-    {
-      img: parquet,
-      size: "vertical",
-    },
-    {
-      img: canape,
-      size: "horizontal",
-    },
-    {
-      img: cuisine,
-      size: "vertical",
-    },
-    {
-      img: chambre,
-      size: "horizontal",
-    },
-    // Ajoute plus d'URLs d'images ici
-  ];
+ 
     
     const getImageClass = (size) => {
       
       if (size === "horizontal") {
-          return "md:max-w-[60%] ";
+          return "sm:max-w-[50%] lg:max-w-[50%] ";
           
       } else if (size === "vertical") {
-          return "md:max-w-[30%] ";
+          return "sm:max-w-[25%] lg:max-w-[25%] ";
           
       } else {
-        return "md:max-w-[30%] ";
+        return "md:max-w-[25%] ";
       }
     };
     
-    useEffect(() => {
+  useEffect(() => {
+    
+        
       gsap.fromTo(
         ".imgAnim",
         {
-          y: 70,
+          y: 60,
           opacity: 0,
-
         },
         {
           y: 0,
           opacity: 1,
-            stagger: 0.5,
+
           duration: 0.5,
+          stagger: 0.1,
 
           scrollTrigger: {
             trigger: ".imgAnim",
@@ -104,6 +60,8 @@ export default function GalleryHome() {
           },
         }
       );
+      
+      
     }, []);
 
   return (
@@ -117,7 +75,7 @@ export default function GalleryHome() {
             src={image.img}
             alt={`Realisation ${index + 1}`}
             onClick={() => openImage(image.img)}
-            className={`imgAnim cursor-pointer object-cover ${getImageClass(
+            className={` imgAnim cursor-pointer object-cover ${getImageClass(
               image.size
             )}`}
           />
@@ -132,7 +90,7 @@ export default function GalleryHome() {
           <img
             src={selectedImage}
             alt="Selected"
-            className="max-w-full max-h-full z-60 cursor-pointer"
+            className=" max-w-full max-h-[80%] z-60 cursor-pointer"
           />
         </div>
       )}

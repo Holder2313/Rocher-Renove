@@ -9,7 +9,7 @@ import Services from "../layout/Services";
 
 export default function Home() {
   return (
-      <div>
+      <div className=' box-border'>
           
     <HeroSlider />
     

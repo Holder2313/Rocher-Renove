@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import entreeCuisine from "../assets/images/home/entreeCuisine.jpg";
+import entreeCuisine from "../assets/images/home/entreeCuisine.webp";
 import AvantageItem from "../components/avantages/AvantageItem";
 import { gsap } from "gsap";
 import { avantagesList } from "../components/avantages/avantagesList";

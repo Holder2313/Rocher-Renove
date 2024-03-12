@@ -39,7 +39,7 @@ export default function Card({ cardData }) {
       ref={cardRef}
       onMouseEnter={animateIn}
       onMouseLeave={animateOut}
-      className=" z-10 bg-black cursor-pointer w-full h-[330px] overflow-hidden relative shadow-lg shadow-black/70"
+      className=" z-10 bg-black cursor-pointer w-full h-[330px] overflow-hidden relative "
     >
       <img
         ref={imageRef}

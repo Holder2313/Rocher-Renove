@@ -75,7 +75,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
               key={index}
               ref={(el) => (linksRef.current[index] = el)}
-              className="my-4 mx-4 lg:flex text-3xl lg:text-sm font-semibold"
+              className="my-4 mx-4 lg:flex text-[6vw] lg:text-sm font-semibold"
             >
               {link.link}
             </p>
@@ -84,7 +84,7 @@ export default function Header() {
 
         <div
           ref={btnRef}
-          className={`ml-4 items-end ${isMenuOpen ? "w-[30%]" : "w-[11%] "}`}
+          className={`  ml-4 items-end ${isMenuOpen ? "w-[30%]" : "w-[11%] "}`}
         >
           {isMenuOpen ? (
             <ContactBtnLong txt={"Contact"} />

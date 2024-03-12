@@ -21,6 +21,6 @@ export const linksData = [
     },
     {
         link: 'Réalisation',
-        path: '/'
+        path: '/realisations'
     },
 ]
