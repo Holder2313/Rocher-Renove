@@ -13,12 +13,12 @@ export const imagesData = [
     {
         img: pinceau,
         size: "vertical",
-        category: 1,
+        category: 3,
     },
     {
         img: bath,
         size: "vertical",
-        category: 1,
+        category: 2,
     },
     {
         img: facade,
@@ -33,22 +33,22 @@ export const imagesData = [
     {
         img: interieur,
         size: "vertical",
-        category: 1,
+        category: 2,
     },
     {
         img: parquet,
         size: "vertical",
-        category: 1,
+        category: 3,
     },
     {
         img: canape,
         size: "horizontal",
-        category: 1,
+        category: 2,
     },
     {
         img: cuisine,
         size: "vertical",
-        category: 1,
+        category: 3,
     },
     {
         img: chambre,

@@ -6,7 +6,7 @@ import Titre from "../../components/titre/Titre";
 
 
 export default function Realisations() {
-  return <div className=" mt-[105px] ">
+  return <div className=" mt-[105px] max-w-[1340px] mx-auto px-[30px]">
     <Bannner />
     <Titre titre={'Nos Réalisations'} />
     <Gallery />
